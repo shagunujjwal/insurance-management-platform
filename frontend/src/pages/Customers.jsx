@@ -35,7 +35,7 @@ function Customers() {
     try{
 
       const res = await axios.get(
-        "http://localhost:5000/api/customers"
+        "https://insurance-management-platform-iem2.onrender.com:5000/api/customers"
       );
 
       setCustomers(res.data);
@@ -94,7 +94,7 @@ function Customers() {
 
         await axios.put(
 
-          `http://localhost:5000/api/customers/${editId}`,
+          `https://insurance-management-platform-iem2.onrender.com:5000/api/customers/${editId}`,
 
           formData
 
@@ -110,7 +110,7 @@ function Customers() {
 
         await axios.post(
 
-          "http://localhost:5000/api/customers",
+          "https://insurance-management-platform-iem2.onrender.com:5000/api/customers",
 
           formData
 
@@ -205,7 +205,7 @@ function Customers() {
 
       await axios.delete(
 
-        `http://localhost:5000/api/customers/${id}`
+        `https://insurance-management-platform-iem2.onrender.com:5000/api/customers/${id}`
 
       );
 

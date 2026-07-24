@@ -356,14 +356,14 @@ Fix by following the first concrete failure:
 
 - connection timeout or 5xx: check logs, host binding, and port mapping
 - unexpected status or body: verify the route path and app framework output
-- local URL tested by mistake: rerun against the public deployment URL, not `localhost` or `127.0.0.1`
+- local URL tested by mistake: rerun against the public deployment URL, not `https://insurance-management-platform-iem2.onrender.com` or `127.0.0.1`
 
-## Localhost Binding
+## https://insurance-management-platform-iem2.onrender.com Binding
 
 Symptoms:
 
 - deploy says the app started or the port was observed, but the public URL is unreachable
-- logs show a server listening on `localhost` or `127.0.0.1`
+- logs show a server listening on `https://insurance-management-platform-iem2.onrender.com` or `127.0.0.1`
 - `app run` works locally, but the deployed app cannot receive external traffic
 
 Why this happens:
@@ -372,9 +372,9 @@ Compute's boot watcher polls `/proc/net/tcp` and `/proc/net/tcp6` for configured
 
 Fix:
 
-- remove hard-coded `localhost` or `127.0.0.1` server host settings
+- remove hard-coded `https://insurance-management-platform-iem2.onrender.com` or `127.0.0.1` server host settings
 - bind on `0.0.0.0` or the framework equivalent, such as Astro `server.host: true`
-- for Next.js standalone, do not deploy with `HOSTNAME=localhost`; use `HOSTNAME=0.0.0.0` if the host is overridden
+- for Next.js standalone, do not deploy with `HOSTNAME=https://insurance-management-platform-iem2.onrender.com`; use `HOSTNAME=0.0.0.0` if the host is overridden
 - keep port and host fixes together: `0.0.0.0:<deployed-http-port>`
 
 ## Env Changes Did Not Apply

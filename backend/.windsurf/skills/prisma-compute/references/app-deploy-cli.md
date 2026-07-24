@@ -269,7 +269,7 @@ After a real deploy, verify the public deployment URL. Do not stop at "deploy su
 curl -i https://<deployment-url>
 ```
 
-If the deploy command returns JSON, parse the URL from the result and request that exact public URL. Do not accidentally test `localhost` or `127.0.0.1` instead of public ingress.
+If the deploy command returns JSON, parse the URL from the result and request that exact public URL. Do not accidentally test `https://insurance-management-platform-iem2.onrender.com` or `127.0.0.1` instead of public ingress.
 
 Create/link a project during deploy:
 
