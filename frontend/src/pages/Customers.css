@@ -1,0 +1,198 @@
+.customers-page {
+  padding: 25px;
+  background: #f8fafc;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Header */
+
+.customers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+
+.customers-header h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1e293b;
+}
+
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+
+/* Search */
+
+.search-box {
+  background: white;
+  padding: 12px 15px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+
+
+/* Form */
+
+.form-box {
+
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  margin-bottom:25px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+
+}
+
+
+.form-box h2 {
+  margin-bottom:20px;
+}
+
+
+.form-box input {
+
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border:1px solid #cbd5e1;
+  border-radius:8px;
+
+}
+
+
+.save-btn {
+
+  background:#16a34a;
+  color:white;
+  border:none;
+  padding:12px 20px;
+  border-radius:10px;
+  cursor:pointer;
+
+}
+
+
+
+/* Table */
+
+.customers-table {
+
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+
+}
+
+
+table {
+
+  width:100%;
+  border-collapse:collapse;
+
+}
+
+
+th {
+
+  background:#2563eb;
+  color:white;
+  padding:14px;
+  text-align:left;
+
+}
+
+
+td {
+
+  padding:14px;
+  border-bottom:1px solid #e2e8f0;
+
+}
+
+
+tr:hover {
+
+  background:#f8fafc;
+
+}
+
+
+
+/* Status */
+
+.active {
+
+  background:#dcfce7;
+  color:#15803d;
+  padding:6px 12px;
+  border-radius:20px;
+
+}
+
+
+.pending {
+
+  background:#fef3c7;
+  color:#b45309;
+  padding:6px 12px;
+  border-radius:20px;
+
+}
+
+
+
+/* Buttons */
+
+.edit-btn {
+
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:8px 14px;
+  border-radius:8px;
+  margin-right:10px;
+  cursor:pointer;
+
+}
+
+
+.delete-btn {
+
+  background:#ef4444;
+  color:white;
+  border:none;
+  padding:8px 14px;
+  border-radius:8px;
+  cursor:pointer;
+
+}

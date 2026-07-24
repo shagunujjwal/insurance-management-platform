@@ -1,0 +1,128 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id Int @id @default(autoincrement())
+
+  name String
+
+  email String @unique
+
+  password String
+
+  role String
+
+  createdAt DateTime @default(now())
+}
+
+model Agent {
+  id Int @id @default(autoincrement())
+
+  name String
+
+  email String @unique
+
+  phone String
+
+  address String
+
+  commission Float
+
+  status String @default("Active")
+
+  createdAt DateTime @default(now())
+}
+
+model Customer {
+  id Int @id @default(autoincrement())
+
+  name String
+
+  dob DateTime
+
+  phone String
+
+  address String
+
+  email String @unique
+
+  createdAt DateTime @default(now())
+
+  policies Policy[]
+
+  documents Document[]
+}
+
+model Policy {
+  id Int @id @default(autoincrement())
+
+  customerId Int
+
+  policyType String
+
+  policyNumber String @unique
+
+  premiumAmount Float
+
+  startDate DateTime
+
+  endDate DateTime
+
+  status String
+
+  customer Customer @relation(fields: [customerId], references: [id])
+
+  claims Claim[]
+
+  payments PremiumPayment[]
+}
+
+model Claim {
+  id Int @id @default(autoincrement())
+
+  policyId Int
+
+  claimAmount Float
+
+  reason String
+
+  status String
+
+  submissionDate DateTime @default(now())
+
+  policy Policy @relation(fields: [policyId], references: [id])
+}
+
+model PremiumPayment {
+  id Int @id @default(autoincrement())
+
+  policyId Int
+
+  paymentDate DateTime @default(now())
+
+  amount Float
+
+  paymentStatus String
+
+  policy Policy @relation(fields: [policyId], references: [id])
+}
+
+model Document {
+  id Int @id @default(autoincrement())
+
+  customerId Int
+
+  fileName String
+
+  filePath String
+
+  uploadedAt DateTime @default(now())
+
+  customer Customer @relation(fields: [customerId], references: [id])
+}

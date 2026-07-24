@@ -1,0 +1,71 @@
+.payments-page{
+  padding:20px;
+}
+
+
+.payments-page h1{
+  margin-bottom:20px;
+}
+
+
+.form-box{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  margin-bottom:25px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+
+.form-box input,
+.form-box select{
+
+  padding:10px;
+  border:1px solid #ddd;
+  border-radius:6px;
+
+}
+
+
+.form-box button{
+
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:6px;
+  cursor:pointer;
+
+}
+
+
+table{
+
+  width:100%;
+  border-collapse:collapse;
+  background:white;
+
+}
+
+
+th,td{
+
+  padding:12px;
+  border-bottom:1px solid #ddd;
+  text-align:left;
+
+}
+
+
+td button{
+
+  background:#ef4444;
+  color:white;
+  border:none;
+  padding:7px 12px;
+  border-radius:5px;
+  cursor:pointer;
+
+}

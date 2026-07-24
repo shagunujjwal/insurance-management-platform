@@ -1,0 +1,96 @@
+.documents-page{
+
+  padding:20px;
+
+}
+
+
+.documents-page h1{
+
+  margin-bottom:20px;
+
+}
+
+
+
+.form-box{
+
+  background:white;
+
+  padding:20px;
+
+  border-radius:10px;
+
+  display:flex;
+
+  gap:10px;
+
+  flex-wrap:wrap;
+
+  margin-bottom:25px;
+
+}
+
+
+
+.form-box select,
+.form-box input{
+
+  padding:10px;
+
+  border:1px solid #ddd;
+
+  border-radius:6px;
+
+}
+
+
+
+.form-box button{
+
+  background:#2563eb;
+
+  color:white;
+
+  border:none;
+
+  padding:10px 20px;
+
+  border-radius:6px;
+
+  cursor:pointer;
+
+}
+
+
+
+table{
+
+  width:100%;
+
+  border-collapse:collapse;
+
+  background:white;
+
+}
+
+
+
+th,
+td{
+
+  padding:12px;
+
+  border-bottom:1px solid #ddd;
+
+}
+
+
+
+a{
+
+  color:#2563eb;
+
+  text-decoration:none;
+
+}

@@ -1,0 +1,52 @@
+.settings-page{
+
+  padding:20px;
+
+}
+
+
+
+.settings-card{
+
+  background:white;
+  padding:25px;
+  margin-top:20px;
+  border-radius:10px;
+  width:500px;
+
+}
+
+
+
+.settings-card label{
+
+  display:block;
+  margin-top:15px;
+
+}
+
+
+
+.settings-card input{
+
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  border:1px solid #ddd;
+  border-radius:6px;
+
+}
+
+
+
+.settings-card button{
+
+  margin-top:20px;
+  padding:10px 20px;
+  background:#2563eb;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+
+}
