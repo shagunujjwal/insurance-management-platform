@@ -35,7 +35,7 @@ function Policies() {
     try{
 
       const res = await axios.get(
-        "https://insurance-management-platform-iem2.onrender.com:5000/api/policies"
+       https://insurance-management-platform-iem2.onrender.com/api/policies
       );
 
       setPolicies(res.data);
@@ -59,7 +59,7 @@ function Policies() {
     try{
 
       const res = await axios.get(
-        "https://insurance-management-platform-iem2.onrender.com:5000/api/customers"
+        "https://insurance-management-platform-iem2.onrender.com:/api/customers"
       );
 
       setCustomers(res.data);
@@ -122,7 +122,7 @@ function Policies() {
 
         await axios.put(
 
-          `https://insurance-management-platform-iem2.onrender.com:5000/api/policies/${editId}`,
+          `https://insurance-management-platform-iem2.onrender.com:/api/policies/${editId}`,
 
           formData
 
@@ -138,7 +138,7 @@ function Policies() {
 
         await axios.post(
 
-          "https://insurance-management-platform-iem2.onrender.com:5000/api/policies",
+         https://insurance-management-platform-iem2.onrender.com/api/policies,
 
           formData
 
@@ -238,7 +238,7 @@ function Policies() {
 
       await axios.delete(
 
-        `https://insurance-management-platform-iem2.onrender.com:5000/api/policies/${id}`
+        `https://insurance-management-platform-iem2.onrender.com/api/policies/${id}`
 
       );
 

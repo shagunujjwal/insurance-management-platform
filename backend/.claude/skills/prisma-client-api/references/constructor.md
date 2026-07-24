@@ -120,7 +120,7 @@ Default transaction settings:
 const prisma = new PrismaClient({
   adapter,
   transactionOptions: {
-    maxWait: 5000,      // Max wait to acquire transaction (ms)
+    maxWait: ,      // Max wait to acquire transaction (ms)
     timeout: 10000,     // Max transaction duration (ms)
     isolationLevel: 'Serializable',
   },

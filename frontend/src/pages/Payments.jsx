@@ -29,7 +29,7 @@ function Payments(){
 
     const res = await axios.get(
 
-      "https://insurance-management-platform-iem2.onrender.com:5000/api/payments"
+      "https://insurance-management-platform-iem2.onrender.com:/api/payments"
 
     );
 
@@ -47,7 +47,7 @@ function Payments(){
 
     const res = await axios.get(
 
-      "https://insurance-management-platform-iem2.onrender.com:5000/api/policies"
+      "https://insurance-management-platform-iem2.onrender.com:/api/policies"
 
     );
 
@@ -103,7 +103,7 @@ function Payments(){
 
       await axios.post(
 
-        "https://insurance-management-platform-iem2.onrender.com:5000/api/payments",
+        "https://insurance-management-platform-iem2.onrender.com:/api/payments",
 
         formData
 
@@ -147,7 +147,7 @@ function Payments(){
 
     await axios.delete(
 
-      `https://insurance-management-platform-iem2.onrender.com:5000/api/payments/${id}`
+      `https://insurance-management-platform-iem2.onrender.com:/api/payments/${id}`
 
     );
 

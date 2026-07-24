@@ -66,7 +66,7 @@ function Signup() {
 
       const response = await axios.post(
 
-        "https://insurance-management-platform-iem2.onrender.com:5000/api/auth/register",
+        "https://insurance-management-platform-iem2.onrender.com:/api/auth/register",
 
         formData
 
