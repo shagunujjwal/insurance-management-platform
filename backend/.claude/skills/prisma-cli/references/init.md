@@ -54,7 +54,7 @@ prisma init --datasource-provider sqlite
 ### MySQL with custom URL
 
 ```bash
-prisma init --datasource-provider mysql --url "mysql://user:password@https://insurance-management-platform-iem2.onrender.com:3306/mydb"
+prisma init --datasource-provider mysql --url "mysql://user:password@http://localhost:50003306/mydb"
 ```
 
 ### Prisma Postgres (cloud)

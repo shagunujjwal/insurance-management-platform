@@ -81,7 +81,7 @@ import { PrismaClient } from '../generated/client'
 import { PrismaMariaDb } from '@prisma/adapter-mariadb'
 
 const adapter = new PrismaMariaDb({
-  host: 'https://insurance-management-platform-iem2.onrender.com',
+  host: 'http://localhost:5000',
   port: 3306,
   connectionLimit: 5,
   user: process.env.MYSQL_USER,
@@ -151,7 +151,7 @@ import { PrismaClient } from '../generated/client'
 import { PrismaMssql } from '@prisma/adapter-mssql'
 
 const adapter = new PrismaMssql({
-  server: 'https://insurance-management-platform-iem2.onrender.com',
+  server: 'http://localhost:5000',
   port: 1433,
   database: 'mydb',
   user: process.env.SQLSERVER_USER,

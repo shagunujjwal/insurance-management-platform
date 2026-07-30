@@ -1,7 +1,7 @@
 import "./Login.css";
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 
 function Login(){
@@ -24,7 +24,7 @@ function Login(){
 
       const res = await axios.post(
 
-        "https://insurance-management-platform-iem2.onrender.com/api/auth/login",
+        "http://localhost:5000/api/auth/login",
 
         {
           email,
@@ -150,6 +150,22 @@ function Login(){
 
 
         </form>
+
+
+
+        <p className="signup-text">
+
+          Don't have an account?{" "}
+
+          <Link to="/signup">
+
+            Signup
+
+          </Link>
+
+
+        </p>
+
 
 
       </div>

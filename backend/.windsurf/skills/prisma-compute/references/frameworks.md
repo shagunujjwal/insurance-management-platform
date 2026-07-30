@@ -65,7 +65,7 @@ import { defineComputeConfig } from "@prisma/compute-sdk/config";
 Compute needs a server process:
 
 - It must listen on the deployed HTTP port. `@prisma/cli app deploy` defaults to the framework's default HTTP port (3000 for most frameworks, 4321 for Astro) unless `--http-port` is passed.
-- It must bind on all interfaces. Do not hard-code `https://insurance-management-platform-iem2.onrender.com` or `127.0.0.1` for a deployed server; use `0.0.0.0`, `server.host: true`, or the framework equivalent.
+- It must bind on all interfaces. Do not hard-code `http://localhost:5000` or `127.0.0.1` for a deployed server; use `0.0.0.0`, `server.host: true`, or the framework equivalent.
 - It must have a deployable entrypoint or recognized framework output.
 - It must not rely on a preview-only command such as `vite preview`.
 - It must receive env vars through `--env`, project env, branch env, or external automation.
@@ -94,7 +94,7 @@ export default nextConfig
 
 Do not pass `--entry` with `nextjs`; the CLI derives the runtime entrypoint from framework build output.
 
-Do not set `HOSTNAME=https://insurance-management-platform-iem2.onrender.com` or `HOSTNAME=127.0.0.1` in deploy env. If the standalone server host is overridden, use `0.0.0.0`.
+Do not set `HOSTNAME=http://localhost:5000` or `HOSTNAME=127.0.0.1` in deploy env. If the standalone server host is overridden, use `0.0.0.0`.
 
 ## Hono
 
@@ -125,7 +125,7 @@ Project expectations:
 - `package.json` has `main` or `module` pointing at the entrypoint, or deploy passes `--entry src/index.ts`
 - server uses `@hono/node-server`
 - code reads `process.env.PORT` and defaults to the same port used by `--http-port`
-- code does not set `hostname` to `https://insurance-management-platform-iem2.onrender.com` or `127.0.0.1`; if hostname is set explicitly, use `0.0.0.0`
+- code does not set `hostname` to `http://localhost:5000` or `127.0.0.1`; if hostname is set explicitly, use `0.0.0.0`
 
 Example runtime shape:
 
@@ -160,7 +160,7 @@ Project expectations:
 - detection uses `nest-cli.json` or the `@nestjs/core` dependency; pass `--framework nestjs` when neither signal is present
 - `src/main.ts` or the compiled runtime must start an HTTP server
 - read `process.env.PORT` and default to the same port used by `--http-port`
-- omit the host argument in `app.listen(port)` or pass `"0.0.0.0"`; do not pass `"https://insurance-management-platform-iem2.onrender.com"` or `"127.0.0.1"`
+- omit the host argument in `app.listen(port)` or pass `"0.0.0.0"`; do not pass `"http://localhost:5000"` or `"127.0.0.1"`
 - use `app build --build-type nestjs` for a Compute artifact check; `app run --build-type nestjs` is not supported, so use the Nest dev server locally
 
 Example runtime shape:
@@ -212,7 +212,7 @@ The build command is `vite build`. The build must produce `.output/server/index.
 
 Do not deploy TanStack Start as a Bun entrypoint such as `src/router.tsx`. If `.output/server/index.mjs` is missing, fix the TanStack/Nitro build path.
 
-Make sure Nitro does not bind only to https://insurance-management-platform-iem2.onrender.com in deployment. If host env/config is customized, use the framework's all-interface host setting rather than `https://insurance-management-platform-iem2.onrender.com`.
+Make sure Nitro does not bind only to http://localhost:5000 in deployment. If host env/config is customized, use the framework's all-interface host setting rather than `http://localhost:5000`.
 
 ## Nuxt
 

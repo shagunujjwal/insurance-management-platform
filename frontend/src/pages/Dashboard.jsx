@@ -113,7 +113,7 @@ try{
 
 const res = await axios.get(
 
-"https://insurance-management-platform-iem2.onrender.com:5000/api/dashboard/stats"
+"http://localhost:5000/api/dashboard/stats"
 
 );
 

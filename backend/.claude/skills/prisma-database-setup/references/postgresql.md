@@ -42,7 +42,7 @@ export default defineConfig({
 In `.env`:
 
 ```env
-DATABASE_URL="postgresql://user:password@https://insurance-management-platform-iem2.onrender.com:5432/mydb?schema=public"
+DATABASE_URL="postgresql://user:password@http://localhost:50005432/mydb?schema=public"
 ```
 
 ### Connection String Format
@@ -53,7 +53,7 @@ postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=SCHEMA
 
 - **USER**: Database user
 - **PASSWORD**: Password (URL encoded if special chars)
-- **HOST**: Hostname (https://insurance-management-platform-iem2.onrender.com, IP, or domain)
+- **HOST**: Hostname (http://localhost:5000, IP, or domain)
 - **PORT**: Port (default 5432)
 - **DATABASE**: Database name
 - **SCHEMA**: Schema name (default `public`)

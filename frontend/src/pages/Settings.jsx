@@ -40,7 +40,7 @@ function Settings(){
 
       const res = await axios.put(
 
-        `https://insurance-management-platform-iem2.onrender.com:/api/users/update-profile/${user.id}`,
+        `http://localhost:5000/api/users/update-profile/${user.id}`,
 
         {
 
@@ -113,7 +113,7 @@ function Settings(){
 
       const res = await axios.put(
 
-        `https://insurance-management-platform-iem2.onrender.com/api/users/change-password/${user.id}`,
+        `http://localhost:5000/api/users/change-password/${user.id}`,
 
         {
 

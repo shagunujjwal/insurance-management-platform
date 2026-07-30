@@ -42,7 +42,7 @@ export default defineConfig({
 In `.env`:
 
 ```env
-DATABASE_URL="mysql://user:password@https://insurance-management-platform-iem2.onrender.com:3306/mydb"
+DATABASE_URL="mysql://user:password@http://localhost:50003306/mydb"
 ```
 
 ### Connection String Format
@@ -73,7 +73,7 @@ Use a driver adapter for the standard SQL workflow.
    import { PrismaMariaDb } from '@prisma/adapter-mariadb'
 
    const adapter = new PrismaMariaDb({
-     host: 'https://insurance-management-platform-iem2.onrender.com',
+     host: 'http://localhost:5000',
      port: 3306,
      connectionLimit: 5,
      user: process.env.MYSQL_USER,
