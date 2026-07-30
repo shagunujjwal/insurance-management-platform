@@ -25,7 +25,7 @@ function Documents(){
     try{
 
       const res = await axios.get(
-        "http://localhost:5000/api/documents"
+        "https://insurance-management-platform-iem2.onrender.com/api/documents"
       );
 
       setDocuments(res.data);
@@ -48,7 +48,7 @@ function Documents(){
     try{
 
       const res = await axios.get(
-        "http://localhost:5000/api/customers"
+        "https://insurance-management-platform-iem2.onrender.com/api/customers"
       );
 
       setCustomers(res.data);
@@ -139,7 +139,7 @@ function Documents(){
 
       await axios.post(
 
-        "http://localhost:5000/api/documents",
+        "https://insurance-management-platform-iem2.onrender.com/api/documents",
 
         data
 
@@ -327,7 +327,7 @@ function Documents(){
 
                 <a
 
-                href={`http://localhost:5000/${doc.filePath}`}
+                href={`https://insurance-management-platform-iem2.onrender.com/${doc.filePath}`}
 
                 target="_blank"
 

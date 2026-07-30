@@ -42,7 +42,7 @@ export default defineConfig({
 In `.env`:
 
 ```env
-DATABASE_URL="sqlserver://http://localhost:50001433;database=mydb;user=sa;password=Password123;encrypt=true;trustServerCertificate=true"
+DATABASE_URL="sqlserver://https://insurance-management-platform-iem2.onrender.com1433;database=mydb;user=sa;password=Password123;encrypt=true;trustServerCertificate=true"
 ```
 
 ### Connection String Format
@@ -70,7 +70,7 @@ Use a driver adapter for the standard SQL workflow.
    import { PrismaMssql } from '@prisma/adapter-mssql'
 
    const adapter = new PrismaMssql({
-     server: 'http://localhost:5000',
+     server: 'https://insurance-management-platform-iem2.onrender.com',
      port: 1433,
      database: 'mydb',
      user: process.env.SQLSERVER_USER,

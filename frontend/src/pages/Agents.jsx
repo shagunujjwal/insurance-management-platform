@@ -39,7 +39,7 @@ function Agents(){
     try{
 
       const res = await axios.get(
-        "http://localhost:5000/api/agents"
+        "https://insurance-management-platform-iem2.onrender.com/api/agents"
       );
 
 
@@ -88,7 +88,7 @@ function Agents(){
 
       await axios.post(
 
-        "http://localhost:5000/api/agents",
+        "https://insurance-management-platform-iem2.onrender.com/api/agents",
 
         form
 
@@ -134,7 +134,7 @@ function Agents(){
 
       await axios.delete(
 
-        `http://localhost:5000/api/agents/${id}`
+        `https://insurance-management-platform-iem2.onrender.com/api/agents/${id}`
 
       );
 

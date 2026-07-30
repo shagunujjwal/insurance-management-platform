@@ -33,7 +33,7 @@ prisma studio [options]
 prisma studio
 ```
 
-Opens at http://localhost:50005555
+Opens at https://insurance-management-platform-iem2.onrender.com5555
 
 ### Custom port
 
